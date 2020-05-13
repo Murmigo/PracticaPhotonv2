@@ -74,9 +74,6 @@ public class NetWorkManager : MonoBehaviourPunCallbacks
         RoomMenuScreen.SetActive(true);
 
         _roomName = "room10";
-
-
-
     }
 
 

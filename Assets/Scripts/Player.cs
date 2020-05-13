@@ -27,6 +27,7 @@ public class Player : MonoBehaviourPun
 
     public Renderer rend;
     public PhotonView pv;
+    private TextMesh cn;
 
     public Dictionary<Color, int> ColorDict = new Dictionary<Color, int>();
     public Dictionary<int, Color> IntColorDict = new Dictionary<int, Color>();
@@ -46,7 +47,7 @@ public class Player : MonoBehaviourPun
         rb = GetComponent<Rigidbody>();
         rend = GetComponent<Renderer>();
         pv = GetComponent<PhotonView>();
-
+        cn = GetComponentInChildren<TextMesh>();
     }
 
     void Start()
@@ -57,10 +58,9 @@ public class Player : MonoBehaviourPun
             PlayerCamera.SetActive(true);
             rend.material.color = NetWorkManager.Instance.PlayerColor;
             Color temp = NetWorkManager.Instance.PlayerColor;
-            GetComponentInChildren<TextMesh>().text = NetWorkManager.Instance.PlayerName.text;
-            //CharacterName.text = NetWorkManager.Instance.PlayerName.text;
-            pv.RPC("SetColor", RpcTarget.Others, ColorDict[temp]);
-            pv.RPC("SetName", RpcTarget.All, NetWorkManager.Instance.PlayerName);
+
+            this.pv.RPC("SetColor", RpcTarget.All, ColorDict[temp]);
+            this.pv.RPC("SetName", RpcTarget.All, NetWorkManager.Instance.PlayerName.text);
 
         }
         else
@@ -73,7 +73,7 @@ public class Player : MonoBehaviourPun
     [PunRPC]
     void SetName(string name)
     {
-        CharacterName.text = name;
+        cn.text = name;
     }
 
     [PunRPC]
