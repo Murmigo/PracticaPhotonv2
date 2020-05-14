@@ -59,8 +59,8 @@ public class Player : MonoBehaviourPun
             rend.material.color = NetWorkManager.Instance.PlayerColor;
             Color temp = NetWorkManager.Instance.PlayerColor;
 
-            this.pv.RPC("SetColor", RpcTarget.All, ColorDict[temp]);
-            this.pv.RPC("SetName", RpcTarget.All, NetWorkManager.Instance.PlayerName.text);
+            this.pv.RPC("SetColor", RpcTarget.AllBuffered, ColorDict[temp]);
+            this.pv.RPC("SetName", RpcTarget.AllBuffered, NetWorkManager.Instance.PlayerName.text);
 
         }
         else

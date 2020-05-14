@@ -203,7 +203,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 291217295}
         m_MethodName: ConnecttoRoom
         m_Mode: 1
         m_Arguments:
@@ -332,7 +332,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 291217295}
         m_MethodName: Connect
         m_Mode: 1
         m_Arguments:
@@ -802,7 +802,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 291217294}
-  - component: {fileID: 291217293}
+  - component: {fileID: 291217295}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -810,18 +810,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &291217293
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 291217292}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 660159a2769e4c44180cb34e6375c055, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &291217294
 Transform:
   m_ObjectHideFlags: 0
@@ -836,6 +824,29 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &291217295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 291217292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a181f0c87ef521d4b958d08bf7d8bf19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  World: {fileID: 1882665278}
+  mainCamera: {fileID: 963194227}
+  ConnectScreen: {fileID: 57970261}
+  ConnectedScreen: {fileID: 1602599638}
+  DisconnectedScreen: {fileID: 87796560}
+  RoomMenuScreen: {fileID: 1247937213}
+  RoomName: {fileID: 833245438}
+  CharacterName: {fileID: 1197439514}
+  PlayerColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  PlayerName: {fileID: 68112715}
+  _roomName: 
 --- !u!1 &294376808
 GameObject:
   m_ObjectHideFlags: 0
@@ -1572,7 +1583,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &727948217
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2112,7 +2123,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!81 &963194226
 AudioListener:
   m_ObjectHideFlags: 0
@@ -2172,7 +2183,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: 0, y: 6.14, z: -26.84}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3535,7 +3546,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &1882665279
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -39,7 +39,7 @@ public class Bullet : MonoBehaviourPun
             //collision.gameObject.GetComponent<Player>().DamagePlayer(damage);
             Debug.Log("Collided with Player");
             collision.gameObject.GetComponent<Player>().pv.RPC("DamagePlayer", RpcTarget.All,damage);
-            pv.RPC("DestroyBullet", RpcTarget.All);
+            this.pv.RPC("DestroyBullet", RpcTarget.All);
         }
     }
 
